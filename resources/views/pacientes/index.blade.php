@@ -5,7 +5,9 @@
 @section('content')
     <div class="container">
         <h1>Pacientes</h1>
-        <a href="{{ route('pacientes.create') }}" class="btn btn-primary mb-3">Cadastrar Paciente</a>
+        <div style="text-align: right;">
+            <a href="{{ route('pacientes.create') }}" class="btn btn-primary mb-3">Cadastrar Novo Paciente</a>
+        </div>
         <table class="table">
             <thead>
             <tr>
@@ -44,22 +46,4 @@
         </table>
     </div>
 
-    <script>
-        function confirmDelete(pacienteId) {
-            Swal.fire({
-                title: 'Confirmação de Exclusão',
-                text: 'Tem certeza de que deseja excluir o paciente?',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#3085d6',
-                confirmButtonText: 'Sim, excluir',
-                cancelButtonText: 'Cancelar'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    document.getElementById('delete-form-' + pacienteId).submit();
-                }
-            });
-        }
-    </script>
 @endsection

@@ -49,7 +49,10 @@
                         <input type="email" class="form-control" id="email" name="email">
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <a href="{{ route('pacientes.index') }}" class="btn btn-secondary">Cancelar</a>
+                    </div>
                 </form>
             </div>
         </div>
